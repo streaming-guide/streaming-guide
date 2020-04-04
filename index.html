@@ -164,5 +164,16 @@
       </small>
     </footer>
 
+    <script>
+      for (let row of document.querySelectorAll('table tbody tr')) {
+        let total = row.querySelector('td:nth-child(2)').textContent
+
+        for (let cell of row.querySelectorAll('td:nth-child(n+3)')) {
+          let value = cell.textContent
+
+          cell.insertAdjacentHTML('beforeend', `<progress max=${total} value=${value}></progress>`);
+        }
+      }
+    </script>
   </body>
 </html>
