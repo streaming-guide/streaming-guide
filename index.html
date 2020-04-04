@@ -171,7 +171,7 @@
         for (let cell of row.querySelectorAll('td:nth-child(n+3)')) {
           let value = cell.textContent
 
-          cell.insertAdjacentHTML('beforeend', `<progress max=${total} value=${value}></progress>`);
+          cell.insertAdjacentHTML('beforeend', `<br><progress max=${total} value=${value}></progress>`);
         }
       }
     </script>
